@@ -1,0 +1,48 @@
+#map {
+    @include full;
+    background-color: $color-dark;
+    cursor: grab;
+
+
+    //custom marker
+    .mapboxgl-marker {
+        cursor: pointer;
+
+        * {
+            pointer-events: none;
+        }
+
+        svg {
+            width: 31px;
+            height: 49px;
+            transition: transform $time ease-out;
+            transform-origin: bottom;
+
+            circle {
+                opacity: 0;
+                transition: opacity $time ease-out;
+            }
+    
+            path {
+                fill: $color-brown;
+            }
+
+            ellipse {
+                display: none;
+            }
+        }
+
+
+        &.is-active {
+            z-index: 1;
+
+            svg {
+                transform: scale(1.2);
+
+                circle {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Display a map on a webpage</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="./src/scss/main.scss">
+</head>
+
+<body>
+    <div class="wrapper" id="js-map-wrapper">
+        <img src="/logo.svg" alt="logo" class="logo">
+
+        <div id="map"></div>
+
+        <div class="sidebar" id="js-sidebar">
+            <button class="sidebar__close" id="js-close"><img src="/close.svg" alt="close sidebar"></button>
+
+            <div class="location">
+                <div class="location__static-img">
+                    <img src="/pin.svg" alt="pin" class="svg-pin">
+                    <img src="" alt="location static image" id="js-static-img" class="static-image">
+                </div>
+                <h4 class="location__name" id="js-name">Location name</h4>
+                <h6 class="location__continent" id="js-continent">Location continent</h6>
+                <p class="location__description" id="js-description">Location description</p>
+                <a href="#" target="_blank" class="location__website" id="js-website">
+                    <img src="/url.svg" alt="website">
+                    <span id="js-url">Location website</span> 
+                </a>
+            </div>
+
+            <div class="sidebar__buttons">
+                <button id="js-prev" class="sidebar__button button">Prev</button>
+
+                <p class="sidebar__counter">
+                    <span class="current" id="js-current-index">0</span>/
+                    <span class="total" id="js-total-index">0</span>
+                </p>
+
+                <button id="js-next" class="sidebar__button button">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./src/ts/main.ts" type="module"></script>
+</body>
+</html>

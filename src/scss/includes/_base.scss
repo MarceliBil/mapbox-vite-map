@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: $color-dark;
+    color: $color-white;
+    position: relative;
+    overflow: hidden;
+    @include flex;
+    font-family: sans-serif;
+}
+
+
+.wrapper {
+    @include full;
+}
+
+
+a {
+    text-decoration: none;
+    color: $color-dark;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+.logo {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    top: 30px;
+    left: 30px;
+    width: 78px;
+}

@@ -1,0 +1,12 @@
+@mixin flex($a: column, $b: center, $c: center) {
+    display: flex;
+    flex-direction: $a;
+    justify-content: $b;
+    align-items: $c;
+}
+
+
+@mixin full() {
+    position: absolute;
+    inset: 0;
+}

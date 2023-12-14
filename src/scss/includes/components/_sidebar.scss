@@ -1,0 +1,89 @@
+.sidebar {
+    $sidebar-padding: 40px;
+
+    position: absolute;
+    right: 0;
+    background-color: $color-white;
+    color: $color-black;
+    width: 400px;
+    height: 100%;
+    transition: transform $time linear;
+    transform: translateX(100%);
+    @include flex(column, flex-start);
+    padding: $sidebar-padding;
+    z-index: 2;
+    padding-top: 45px;
+    font-weight: 700;
+
+
+    &__close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+        z-index: 1;
+        
+        img {
+            background-color: $color-white;
+            border-radius: 50%;
+        }
+    }
+
+
+    &__buttons {
+        @include flex(row);
+        position: absolute;
+        bottom: 30px;
+        gap: 20px;
+        width: calc(100% - $sidebar-padding * 2);
+    }
+
+
+    &__button {
+        color: $color-dark;
+        width: 50%;
+        padding: 10px 0;
+        text-transform: uppercase;
+        border-top: 3px solid $color-dark;
+        font-weight: 700;
+        font-size: 1.3rem;
+
+        &:nth-of-type(1) {
+            text-align: left;
+        }
+
+
+        &:nth-of-type(2) {
+            text-align: right;
+        }
+
+    }
+
+
+    &__counter{
+        display: flex;
+        pointer-events: none;
+        user-select: none;
+        position: absolute;
+        font-size: 1.4rem;
+
+        span {
+            display: block;
+            min-width: 30px;
+        }
+
+        .current {
+            text-align: right;
+            margin-right: 5px;
+        }
+
+        .total {
+            text-align: right;
+        }
+    }
+
+
+    &.is-shown {
+        transform: translateX(0);
+    }
+}
